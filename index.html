@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TripLock prototype</title>
+  <meta name="description" content="Prototype: group trips where the organiser never fronts money or chases friends.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">🔒</span>
+        <span>TripLock</span>
+        <span class="tag">Prototype</span>
+      </div>
+      <div class="role">
+        <span class="role-label">Viewing as</span>
+        <div class="seg" role="group" aria-label="Switch who you are viewing as">
+          <button type="button" data-action="role" data-role="organiser"></button>
+          <button type="button" data-action="role" data-role="member"></button>
+        </div>
+      </div>
+      <nav class="steps" id="steps" aria-label="Prototype steps"></nav>
+    </header>
+
+    <div class="instruction" id="instruction" role="note"></div>
+
+    <main id="screen" class="screen"></main>
+
+    <nav class="bottom-nav" id="bottomNav" aria-label="Previous and next step"></nav>
+
+    <p class="foot">Demo data only. No real payments or messages are sent.
+      <button type="button" class="link" data-action="reset">Reset demo</button>
+    </p>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal" class="modal" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
